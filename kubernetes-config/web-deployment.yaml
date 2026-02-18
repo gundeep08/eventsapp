@@ -20,5 +20,7 @@ spec:
      - image: gundeep08/events-website:v1.0
        name: events-web
        ports:
-       - containerPort: 8080
-
+       - containerPort: 8082
+       env:
+       - name: SERVER
+         value: "http://events-api-svc:8082"
